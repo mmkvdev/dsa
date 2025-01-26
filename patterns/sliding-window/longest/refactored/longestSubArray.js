@@ -3,7 +3,7 @@
  * E.g., [2, 5, 1, 7, 10]; k -> 14
  * output: [5, 1, 7]
  * Time Complexity - O(N+N)
- * Space Complexity -
+ * Space Complexity - O(1)
  */
 
 const longestSubArray = (arr, k) => {
