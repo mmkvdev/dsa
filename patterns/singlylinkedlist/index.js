@@ -86,6 +86,65 @@ class SinglyLinkedList {
         return this;
 
     }
+
+    get (index) {
+        if (index < 0 || index >= this.length) return null;
+        let current = this.head;
+        let ptr = 0;
+
+        while ((ptr !== index)) {
+            current = current.next;
+            ptr++;
+        }
+
+        return current;
+    }
+
+    set (val, index) {
+        let foundNode = this.get(index);
+
+        if (foundNode) {
+            foundNode.val = val;
+            return true;
+        }
+
+        return false;
+    }
+
+    insert (val, index) {
+        if (index < 0 || index > this.length) return false;
+
+        if (index === 0) return !!this.unshift(val);
+        if (index === this.length) return !!this.push(val);
+        else {
+            let newNode = new Node(val);
+            let prevNode = this.get(index - 1);
+            let tmp = prevNode.next;
+            prevNode.next = newNode;
+            newNode.next = tmp;
+        }
+
+        this.length++;
+        return true;
+    }
+
+    remove (index) {
+        if (index < 0 || index > this.length) return undefined;
+
+        if (index === 0) return !!this.shift(index);
+        if (index === this.length - 1) return !!this.pop();
+        else {
+            let prunableNode = this.get(index);
+            let prevNode = this.get(index - 1);
+
+            prevNode.next = prunableNode.next;
+            prunableNode.next = null;
+        }
+
+        this.length--;
+        return true;
+    }
+
     print () {
         let current = this.head;
         console.log(current);
@@ -120,6 +179,6 @@ list.print();
 // list.shift();
 // list.print();
 
-list.unshift(5);
-list.unshift(15);
-list.print();
+// list.unshift(5);
+// list.unshift(15);
+// list.print();
