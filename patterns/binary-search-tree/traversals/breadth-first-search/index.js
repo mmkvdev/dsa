@@ -107,6 +107,7 @@ class BinarySearchTree {
     return visited;
   }
 
+  // tree cloning, prefix notation
   dfsPreOrder() {
     let visited = [];
 
@@ -121,6 +122,7 @@ class BinarySearchTree {
     return visited;
   }
 
+  // tree deletion, post fix notation (reverse polish notation)
   dfsPostOrder() {
     let visited = [];
 
@@ -134,6 +136,7 @@ class BinarySearchTree {
     return visited;
   }
 
+  // sorting a tree, used in BFS
   dfsInOrder() {
     let visited = [];
 
