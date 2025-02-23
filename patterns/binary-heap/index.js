@@ -10,17 +10,17 @@ class MaxBinaryHeap {
 
   bubbleUp() {
     let idx = this.values.length - 1;
+    let childValue = this.values[idx];
+
     while (idx > 0) {
       let parentIndex = Math.floor((idx - 1) / 2);
-      let childValue = this.values[idx];
       let parentValue = this.values[parentIndex];
       if (parentValue >= childValue) break;
-      if (parentValue < childValue) {
-        let tmp = parentValue;
-        parentValue = childValue;
-        childValue = tmp;
-        idx = parentIndex;
-      }
+      this.values[parentIndex] = childValue;
+      this.values[idx] = parentValue;
+      idx = parentIndex;
     }
   }
 }
+
+const heap = new MaxBinaryHeap();
