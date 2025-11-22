@@ -6,6 +6,13 @@ const isAlphaNumeric = (char) => {
 };
 
 // solution 1
+/**
+ * TIME COMPLEXITY: O(n) => where `n` is the length of the string, since we're processing each character of the string once
+ * SPACE COMPLEXITY:
+ * worst case: O(k) => where `k` is the space consumed by `result` obj for processing `k` distinct alpha numeric characters in the string,
+ * but it can also be O(n), in case of strings like `abcd` where we have to process all the distinct characters in the string
+ * best case: O(1), in case of strings like `aaaa`
+ */
 const charCount = (str) => {
   let result = {};
 
@@ -44,6 +51,13 @@ const isAlphaNumericUsingRegex = (char) => {
 };
 
 // solution 2
+/**
+ * TIME COMPLEXITY: O(n) => where `n` is the length of the string, since we're processing each character of the string once
+ * SPACE COMPLEXITY:
+ * worst case: O(k) => where `k` is the space consumed by `result` obj for processing `k` distinct alpha numeric characters in the string,
+ * but it can also be O(n), in case of strings like `abcd` where we have to process all the distinct characters in the string
+ * best case: O(1), in case of strings like `aaaa`
+ */
 const charCountUsingRegex = (str) => {
   let result = {};
 
@@ -91,6 +105,13 @@ const isAlphaNumericUsingCharCode = (char) => {
 };
 
 // solution 3
+/**
+ * TIME COMPLEXITY: O(n) => where `n` is the length of the string, since we're processing each character of the string once
+ * SPACE COMPLEXITY:
+ * worst case: O(k) => where `k` is the space consumed by `result` obj for processing `k` distinct alpha numeric characters in the string,
+ * but it can also be O(n), in case of strings like `abcd` where we have to process all the distinct characters in the string
+ * best case: O(1), in case of strings like `aaaa`
+ */
 const charCountUsingCharCode = (str) => {
   let obj = {};
   for (let char of str) {
