@@ -9,11 +9,13 @@
 const sumZero = (arr) => {
   let left = 0,
     right = arr.length - 1;
+
   while (left < right) {
     let sum = arr[left] + arr[right];
     if (sum === 0) return [arr[left], arr[right]];
-    else if (sum > 0) right--;
-    else left++;
+    else if (sum > 0)
+      right--; // if the sum is a large number, the only way to reduce `sum` is move away from larger numbers, moving `right--` guarantees a smaller number
+    else left++; // if your sum is too small, you need a bigger number, moving `left` forward gives you a less negative / more positive value
   }
 };
 
