@@ -1,5 +1,6 @@
 // Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
 
+// Two Pointer + In-place overwrite technique
 // Time Complexity - O(n)
 // Space Complexity - O(1)
 const countUniqueValues = (arr) => {
