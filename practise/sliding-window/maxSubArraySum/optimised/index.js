@@ -8,7 +8,7 @@
 // Time Complexity - O(n)
 // Space Complexity - O(1)
 
-// OPTIMISED FORCE APPROACH\
+// OPTIMISED FORCE APPROACH
 const maxSubarraySum = (arr, num) => {
   // if length of the array is 0, if n < 0
   if (arr.length === 0 || num < 0 || arr.length < num) return null;
@@ -27,3 +27,9 @@ const maxSubarraySum = (arr, num) => {
 
   return maxSum;
 };
+
+console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2)); // 10
+console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4)); // 17
+console.log(maxSubarraySum([4, 2, 1, 6], 1)); // 6
+console.log(maxSubarraySum([4, 2, 1, 6, 2], 4)); // 13
+console.log(maxSubarraySum([], 4)); // null
