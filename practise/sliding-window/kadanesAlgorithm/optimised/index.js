@@ -1,6 +1,6 @@
 // Problem: Given an integer array arr[], find the subarray (containing at least one element) which has the maximum possible sum, and return that sum.
 
-// Time Complexity - O(n^2)
+// Time Complexity - O(n)
 // Space Complexity - O(1)
 
 // Examples:
