@@ -8,7 +8,7 @@
 // Time Complexity - O(n)
 // Space Complexity - O(1)
 
-// OPTIMISED FORCE APPROACH
+// OPTIMISED APPROACH
 const maxSubarraySum = (arr, num) => {
   // if length of the array is 0, if n < 0
   if (arr.length === 0 || num < 0 || arr.length < num) return null;
