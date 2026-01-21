@@ -2,6 +2,8 @@
  * @param {string} s
  * @return {number}
  */
+// Time Complexity - O(n)
+// Space Complexity - O(n)
 var lengthOfLongestSubstring = function (s) {
   let l = 0,
     r = 0,
