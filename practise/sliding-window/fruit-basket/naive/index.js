@@ -1,3 +1,7 @@
+// Fruit Into Baskets
+// Re-definition: Maximum Length Subarray with at-most 2 types of numbers
+// https://leetcode.com/problems/fruit-into-baskets/description/
+
 /**
  * @param {number[]} fruits
  * @return {number}
