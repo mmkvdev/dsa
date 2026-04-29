@@ -6,8 +6,9 @@
 // input will be a string
 // output will be an object containing the character followed by its count
 
+// ------------- APPROACH 1 ------------- //
 // function to check whether a character is alpha-numeric or not
-const isAlphaNumeric = (char) => {
+const isAlphaNumericUsingCharCode = (char) => {
   // get char code
   const code = char.charCodeAt(0);
 
@@ -32,13 +33,13 @@ const isAlphaNumeric = (char) => {
  * O(k), where `k` is the count of distinct alpha numeric characters in the string
  * O(n), in cases like `abcd`, where all the characters are distinct
  */
-const charCount = (str) => {
+const charCountUsingCharCode = (str) => {
   let res = {};
 
   // iterate over the string and keep it track of alpha numeric character occurrence
   for (let char of str) {
     // check if the current character is alpha-numeric
-    if (isAlphaNumeric(char)) {
+    if (isAlphaNumericUsingCharCode(char)) {
       let currentChar = char.toLowerCase();
       res[currentChar] = (res[currentChar] || 0) + 1;
     }
@@ -47,17 +48,59 @@ const charCount = (str) => {
   return res;
 };
 
-console.log(charCount("aaaa"));
+// ------------- APPROACH 2 ------------- //
+const isAlphaNumericUsingRegex = (char) => {
+  // regex check to only process a character if it's an alpha-numeric string
+  return /[a-z0-9]/.test(char);
+};
+
+/**
+ * Time Complexity - O(n)
+ * Space Complexity - O(n)
+ */
+const charCountUsingRegex = (str) => {
+  let res = {};
+
+  // iterate over the string and keep it track of alpha numeric character occurrence
+  for (let char of str) {
+    let currentChar = char.toLowerCase();
+    // check if the current character is alpha-numeric
+    if (isAlphaNumericUsingRegex(currentChar)) {
+      res[currentChar] = (res[currentChar] || 0) + 1;
+    }
+  }
+
+  return res;
+};
+
+// ------------- APPROACH 1 ------------- //
+console.log(charCountUsingCharCode("aaaa"));
 /**
  * { a: 4 }
  */
 
-console.log(charCount("hello"));
+console.log(charCountUsingCharCode("hello"));
 /**
  * { h: 1, e: 1, l: 2, o: 1 }
  */
 
-console.log(charCount("Your PIN number is 1234!"));
+console.log(charCountUsingCharCode("Your PIN number is 1234!"));
+/**
+ * { 1: 1, 2: 1, 3: 1, 4: 1, b: 1, e: 1, i: 2, m: 1, n: 2, o: 1, p: 1, r: 2, s: 1, u: 2, y: 1 }
+ */
+
+// ------------- APPROACH 2 ------------- //
+console.log(charCountUsingRegex("aaaa"));
+/**
+ * { a: 4 }
+ */
+
+console.log(charCountUsingRegex("hello"));
+/**
+ * { h: 1, e: 1, l: 2, o: 1 }
+ */
+
+console.log(charCountUsingRegex("Your PIN number is 1234!"));
 /**
  * { 1: 1, 2: 1, 3: 1, 4: 1, b: 1, e: 1, i: 2, m: 1, n: 2, o: 1, p: 1, r: 2, s: 1, u: 2, y: 1 }
  */
