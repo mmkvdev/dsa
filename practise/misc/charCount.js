@@ -26,6 +26,12 @@ const isAlphaNumeric = (char) => {
   return true;
 };
 
+/**
+ * Time Complexity - O(n), where n is length of the string
+ * Space Complexity -
+ * O(k), where `k` is the count of distinct alpha numeric characters in the string
+ * O(n), in cases like `abcd`, where all the characters are distinct
+ */
 const charCount = (str) => {
   let res = {};
 
