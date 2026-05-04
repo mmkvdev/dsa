@@ -1,5 +1,5 @@
 // Time Complexity - O(n)
-// Space Complexity - O(n)
+// Space Complexity - O(1)
 const moveZeroes = (arr) => {
   if (arr.length === 1) return arr;
 
