@@ -1,3 +1,6 @@
+/**
+ * Date: 24th August, 2026
+ */
 // write a function to calculate the sum of all numbers starting from 1 upto (and including) some number `n`
 
 function addUpTo(n) {

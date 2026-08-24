@@ -1,3 +1,6 @@
+/**
+ * Date: 24th August, 2026
+ */
 // optimised approach using core math equation of calculating sum of first `n` natural numbers
 function addUpTo(n) {
   return (n * (n + 1)) / 2;
